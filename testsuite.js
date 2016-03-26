@@ -58,6 +58,8 @@ casper.test.begin( 'Visual Regression PhantomCSS Tests', function ( test ) {
   var url = baseURL + testObj['relativeUrl'];
   var waitTime = testObj['waitTime'] || configs['global']['waitTime'];
 	var cssSelector = testObj['cssSelector'];
+  var actionBased = testObj['actionBased'];
+  var actionSelector = testObj['actionSelector'];
 	var moduleName = testObj['moduleName'];
 	var viewport = testObj['viewport'];
 	  switch(viewport) {
@@ -94,6 +96,11 @@ casper.test.begin( 'Visual Regression PhantomCSS Tests', function ( test ) {
       casper.viewport(viewportWidth, casper.getElementsBounds('body')[0]['height'],
             casper.wait(waitTime, function () {
                 var documentHeight = casper.getElementsBounds('body')[0]['height'];
+
+                if (actionBased && actionSelector.length > 0) {
+                  casper.click(actionSelector);
+                }
+
                 if(cssSelector){
 					casper.reload
                     phantomcss.screenshot(cssSelector, moduleName)

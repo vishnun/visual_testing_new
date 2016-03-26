@@ -1,0 +1,10 @@
+node_modules/
+**/.DS_Store
+
+.idea/
+
+# To avoid repositories to get heavy with images.
+screenshots/failures/*.png
+screenshots/base_images/*.png
+screenshots/diff_images/*.png
+

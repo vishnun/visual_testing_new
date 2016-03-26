@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <style>
+    body {
+        margin: auto;
+        background: #F2F5E9;
+        width: 347px;
+        font-family: "Arial"
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    ul.gallery li {
+        display: inline-block;
+        opacity: 1;
+        -webkit-transition: opacity .5s ease-in-out;
+        -moz-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
+        transition: opacity .5s ease-in-out;
+    }
+
+    label {
+        cursor: pointer;
+        color: #fff;
+        background: #5D6B74;
+        padding: 5px 19px;
+    }
+
+    input {
+        display: none;
+    }
+
+    img {
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+    /*Select Categorie*/
+
+    input#select-animals:checked ~ .gallery li:not(.animals-item),
+    input#select-lightning:checked ~ .gallery li:not(.lightning-item),
+    input#select-desert:checked ~ .gallery li:not(.desert-item) {
+        opacity: 0.1;
+    }
+    </style>
+</head>
+
+<body>
+    <h2>css Portfolio Gallery</h2>
+    <input type="radio" id="select-all" name="button">
+    <label for="select-all" class="label-all">
+        All
+    </label>
+    <input type="radio" id="select-animals" name="button">
+    <label for="select-animals" class="label-animals">
+        Animals
+    </label>
+    <input type="radio" id="select-lightning" name="button">
+    <label for="select-lightning" class="label-lightning">
+        Lightning
+    </label>
+    <input type="radio" id="select-desert" name="button">
+    <label for="select-desert" class="label-desert">
+        Desert
+    </label>
+    <ul class="gallery">
+        <li class="animals-item">
+            <img src="http://farm8.staticflickr.com/7254/7740405218_deedfa35cb_t.jpg" />
+        </li>
+        <li class="desert-item">
+            <img src="http://farm5.staticflickr.com/4086/4964465857_0bdbe1a84c_t.jpg" />
+        </li>
+        <li class="lightning-item">
+            <img src="http://farm6.staticflickr.com/5114/5858971312_0fec4bdaa0_t.jpg" />
+        </li>
+        <li class="desert-item">
+            <img src="http://farm8.staticflickr.com/7338/12111748274_e3319bfbd5_t.jpg" />
+        </li>
+        <li class="animals-item">
+            <img src="http://farm7.staticflickr.com/6206/6105317674_80f67a9a5e_t.jpg" />
+        </li>
+        <li class="desert-item">
+            <img src="http://farm7.staticflickr.com/6143/5951696095_c6dd89f5da_t.jpg" />
+        </li>
+        <li class="lightning-item">
+            <img src="http://farm4.staticflickr.com/3130/2840585154_232b19bfbd_t.jpg" />
+        </li>
+        <li class="animals-item">
+            <img src="http://farm9.staticflickr.com/8239/8548052436_a36e792c85_t.jpg" />
+        </li>
+        <li class="lightning-item">
+            <img src="http://farm1.staticflickr.com/129/390350345_a0a04a139d_t.jpg" />
+        </li>
+    </ul>
+</body>
+
+</html>

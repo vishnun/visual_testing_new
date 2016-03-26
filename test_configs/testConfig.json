@@ -1,7 +1,7 @@
 {
   "global": {
     "subdomain": "http://localhost",
-    "port": 4000,
+    "port": 1111,
     "waitTime": 5000,
     "viewports": {
       "mobile": {
@@ -30,10 +30,12 @@
   "tests": [
     {
       "domain":"",
-      "moduleName": "Temp Page",
-      "relativeUrl": "/blogs",
-      "waitTime": 5000,
-      "viewport":"desktop"
+      "moduleName": "Demo",
+      "relativeUrl": "/",
+      "waitTime": 1000,
+      "viewport":"desktop",
+      "actionBased": true,
+      "actionSelector": ".label-lightning"
     }
   ]
 }
