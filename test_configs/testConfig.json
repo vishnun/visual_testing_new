@@ -1,0 +1,39 @@
+{
+  "global": {
+    "subdomain": "http://localhost",
+    "port": 4000,
+    "waitTime": 5000,
+    "viewports": {
+      "mobile": {
+        "height": 540,
+        "width": 480
+      },
+      "desktop": {
+        "height": 1024,
+        "width": 1200
+      },
+      "tablet": {
+        "height": 768,
+        "width": 1024
+      },
+      "mobile-landscape": {
+        "height": 480,
+        "width": 540
+      },
+      "tablet-landscape": {
+        "height": 1024,
+        "width": 768
+      }
+    },
+    "screenShotDirectoryPath": "/screenshots"
+  },
+  "tests": [
+    {
+      "domain":"",
+      "moduleName": "Temp Page",
+      "relativeUrl": "/blogs",
+      "waitTime": 5000,
+      "viewport":"desktop"
+    }
+  ]
+}
